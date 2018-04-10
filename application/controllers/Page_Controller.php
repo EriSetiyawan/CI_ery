@@ -5,9 +5,13 @@ class Page_Controller extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('home');
+		$this->load->model('biodata');
+ 		$data['biodata_array'] = $this->biodata->getBiodataQueryArray();
+ 		$data['biodata_object'] = $this->biodata->getBiodataQueryObject();
+ 		$data['biodata_builder_array'] = $this->biodata->getBiodataBuilderArray();
+ 		$data['biodata_builder_object'] = $this->biodata->getBiodataBuilderObject();
+ 		$this->load->view('home',$data);
 	}
-
 	public function about()
 	{
 		$this->load->view('about');
