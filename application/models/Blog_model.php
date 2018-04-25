@@ -2,14 +2,14 @@
 defined('BASEPATH') OR exit('No direct script allowed');
 
 class Blog_model extends CI_Model {
-	
+    
 
-	public function getAll()
-	{
-		$query = $this->db->get('Blog');
-		return $query->result_array();
-	}
-	public function insert($data) { 
+    public function getAll()
+    {
+        $query = $this->db->get('Blog');
+        return $query->result_array();
+    }
+    public function insert($data) { 
          if ($this->db->insert("Blog", $data)) { 
             return true; 
          } 
@@ -26,8 +26,8 @@ class Blog_model extends CI_Model {
          $this->db->update("Blog", $data); 
       }
       public function getOne($id){
-	    	$query = $this->db->query("select * from Blog where id='$id'");
-			return $query->result_array();
-	  }
-	}
+            $query = $this->db->query("select * from Blog where id='$id'");
+            return $query->result_array();
+      }
+    }
 ?>
