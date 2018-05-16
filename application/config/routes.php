@@ -81,6 +81,6 @@ $route['category/(:any)'] = 'category/index';
 // $route['blog/category/(:num)'] = 'category/artikel/$1';
 
 
-$route['default_controller'] = 'home';
+$route['default_controller'] = 'Blog';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
