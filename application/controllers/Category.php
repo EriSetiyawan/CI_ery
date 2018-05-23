@@ -4,11 +4,8 @@ class category extends CI_controller{
         public function __construct()
     {
         parent::__construct();
-
         // Load custom helper applications/helpers/MY_helper.php
        // $this->load->helper('MY');
-
-        // Load semua model yang kita pakai
         $this->load->model('blog_model');
         $this->load->model('category_model');
     }
